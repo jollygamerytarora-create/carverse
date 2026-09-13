@@ -3,6 +3,8 @@ import { Vehicle } from '@/lib/types';
 import { VEHICLES, vehicleById, vehiclesByBrand } from '@/data';
 import { pushFavorite, removeFavorite } from '@/lib/cloud';
 import type { CvUser } from '@/lib/auth';
+import { vehicleAssetFor } from '@/lib/assetRegistry';
+import { prioritizeAsset } from '@/lib/assetPreloader';
 
 /** The signed-in user whose garage mirrors to Supabase. Set by CarverseApp on
  *  session restore; null = guest (garage stays device-local). */
@@ -126,6 +128,9 @@ export const useStore = create<CarverseState>((set, get) => ({
     set(() => {
       const v = vehicleById(id);
       if (!v) return {};
+      // the car being visited jumps the preload queue (priority lane)
+      const asset = vehicleAssetFor(id);
+      if (asset?.model3D) prioritizeAsset(asset.model3D, id);
       const idx = BRAND_IDS.indexOf(v.brand);
       const lineup = vehiclesByBrand(v.brand);
       return {

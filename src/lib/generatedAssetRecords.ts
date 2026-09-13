@@ -20,7 +20,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
     axisFix: 'z-up', // authored Z-up (scripts/probe_upaxis.py) - rotated upright at load
-    _meta: { name: "BMW 8- Series G15 Coupe M850i", bytes: 40985456 },
+    _meta: { name: "BMW 8- Series G15 Coupe M850i", bytes: 1114292 },
   },
   'bmw-i4': {
     model3D: '/cars/bmw/bmw-i4/model.glb',
@@ -35,7 +35,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2022 BMW i4", bytes: 46661560 },
+    _meta: { name: "2022 BMW i4", bytes: 1530444 },
   },
   'bmw-i5': {
     model3D: '/cars/bmw/bmw-i5/model.glb',
@@ -50,7 +50,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2023 BMW I5 M60", bytes: 42990308 },
+    _meta: { name: "2023 BMW I5 M60", bytes: 1209496 },
   },
   'bmw-i7': {
     model3D: '/cars/bmw/bmw-i7/model.glb',
@@ -65,7 +65,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2023 BMW i7", bytes: 21252440 },
+    _meta: { name: "2023 BMW i7", bytes: 1016900 },
   },
   'bmw-m2': {
     model3D: '/cars/bmw/bmw-m2/model.glb',
@@ -80,7 +80,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "BMW M2", bytes: 40911164 },
+    _meta: { name: "BMW M2", bytes: 3061140 },
   },
   'bmw-m3': {
     model3D: '/cars/bmw/bmw-m3/model.glb',
@@ -95,7 +95,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2021 BMW M3 Competition (G80)", bytes: 45702492 },
+    _meta: { name: "2021 BMW M3 Competition (G80)", bytes: 7091404 },
   },
   'bmw-m4': {
     model3D: '/cars/bmw/bmw-m4/model.glb',
@@ -129,7 +129,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
     hideBeyondOriginalAxis: 1.62, // floating duplicate variant pruned
     paintMaterialPattern: "grille_neon|^Material$|trunk_body", // catch-all materials carrying body panels
     wheelKit: true, // source ships no wheel geometry — stage appends procedural wheels
-    _meta: { name: "BMW M5 (G90/G99) 2024", bytes: 36994180 },
+    _meta: { name: "BMW M5 (G90/G99) 2024", bytes: 2331680 },
   },
   'bmw-m5-e34': {
     model3D: '/cars/bmw/bmw-m5-e34/model.glb',
@@ -220,7 +220,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2015 - Porsche 911 Carrera S | Mid-Poly", bytes: 28457668 },
+    _meta: { name: "2015 - Porsche 911 Carrera S | Mid-Poly", bytes: 3325596 },
   },
   'porsche-911-gt3': {
     model3D: '/cars/porsche/porsche-911-gt3/model.glb',
@@ -327,7 +327,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2023 Porsche Taycan Turbo S", bytes: 37056188 },
+    _meta: { name: "2023 Porsche Taycan Turbo S", bytes: 1312508 },
   },
   'mercedes-amg-sl': {
     model3D: '/cars/mercedes/mercedes-amg-sl/model.glb',
@@ -342,7 +342,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Mercedes-AMG SL (R232) Since 2022", bytes: 85536568 },
+    _meta: { name: "Mercedes-AMG SL (R232) Since 2022", bytes: 7082896 },
   },
   'mercedes-amggt': {
     model3D: '/cars/mercedes/mercedes-amggt/model.glb',
@@ -357,7 +357,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2026 Mercedes-AMG GT63 Pro", bytes: 84366996 },
+    _meta: { name: "2026 Mercedes-AMG GT63 Pro", bytes: 6110392 },
   },
   'mercedes-c63': {
     model3D: '/cars/mercedes/mercedes-c63/model.glb',
@@ -372,7 +372,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Mercedes C63 Coupe (1)", bytes: 57809684 },
+    _meta: { name: "Mercedes C63 Coupe (1)", bytes: 2759588 },
   },
   'mercedes-e53': {
     model3D: '/cars/mercedes/mercedes-e53/model.glb',
@@ -387,7 +387,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Mercedes- Benz E53 Cabrio AMG 2021", bytes: 61769704 },
+    _meta: { name: "Mercedes- Benz E53 Cabrio AMG 2021", bytes: 3477972 },
   },
   'mercedes-eqe': {
     model3D: '/cars/mercedes/mercedes-eqe/model.glb',
@@ -402,7 +402,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Mercedes-Benz EQE", bytes: 29649800 },
+    _meta: { name: "Mercedes-Benz EQE", bytes: 1232764 },
   },
   'mercedes-eqs': {
     model3D: '/cars/mercedes/mercedes-eqs/model.glb',
@@ -417,7 +417,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Mercedes EQS 2021", bytes: 87233908 },
+    _meta: { name: "Mercedes EQS 2021", bytes: 1770004 },
   },
   'mercedes-g63': {
     model3D: '/cars/mercedes/mercedes-g63/model.glb',
@@ -447,7 +447,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Mercedes-AMG GLE 63 Coupe 2022", bytes: 24467264 },
+    _meta: { name: "Mercedes-AMG GLE 63 Coupe 2022", bytes: 1378580 },
   },
   'mercedes-maybach': {
     model3D: '/cars/mercedes/mercedes-maybach/model.glb',
@@ -462,7 +462,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Mercedes-Benz Maybach 2022", bytes: 81540576 },
+    _meta: { name: "Mercedes-Benz Maybach 2022", bytes: 1570244 },
   },
   'mercedes-sclass': {
     model3D: '/cars/mercedes/mercedes-sclass/model.glb',
@@ -492,7 +492,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Audi e-Tron GT - made with Blender", bytes: 44399460 },
+    _meta: { name: "Audi e-Tron GT - made with Blender", bytes: 1737732 },
   },
   'audi-r8': {
     model3D: '/cars/audi/audi-r8/model.glb',
@@ -522,7 +522,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2022 Audi RS3 Hatchback", bytes: 43172460 },
+    _meta: { name: "2022 Audi RS3 Hatchback", bytes: 1496864 },
   },
   'audi-rs5': {
     model3D: '/cars/audi/audi-rs5/model.glb',
@@ -537,7 +537,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Audi RS5", bytes: 26613256 },
+    _meta: { name: "Audi RS5", bytes: 1695620 },
   },
   'audi-rs6': {
     model3D: '/cars/audi/audi-rs6/model.glb',
@@ -552,7 +552,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Audi RS6-R C8 Avant ABT", bytes: 38379224 },
+    _meta: { name: "Audi RS6-R C8 Avant ABT", bytes: 1248504 },
   },
   'audi-rs7': {
     model3D: '/cars/audi/audi-rs7/model.glb',
@@ -567,7 +567,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Audi RS7", bytes: 128303324 },
+    _meta: { name: "Audi RS7", bytes: 2949764 },
   },
   'toyota-camry': {
     model3D: '/cars/toyota/toyota-camry/model.glb',
@@ -597,7 +597,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Toyota GR Supra", bytes: 56391624 },
+    _meta: { name: "Toyota GR Supra", bytes: 2688700 },
   },
   'toyota-gr-yaris': {
     model3D: '/cars/toyota/toyota-gr-yaris/model.glb',
@@ -687,7 +687,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Ford F150 Raptor", bytes: 29820360 },
+    _meta: { name: "Ford F150 Raptor", bytes: 1422556 },
   },
   'ford-focus-st': {
     model3D: '/cars/ford/ford-focus-st/model.glb',
@@ -717,7 +717,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2017 | Ford GT ’66 Heritage Edition", bytes: 52211504 },
+    _meta: { name: "2017 | Ford GT ’66 Heritage Edition", bytes: 1694636 },
   },
   'ford-mustang': {
     model3D: '/cars/ford/ford-mustang/model.glb',
@@ -777,7 +777,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Ferrari 812 SuperFast 2017-2024", bytes: 24688488 },
+    _meta: { name: "Ferrari 812 SuperFast 2017-2024", bytes: 1147968 },
   },
   'ferrari-daytona': {
     model3D: '/cars/ferrari/ferrari-daytona/model.glb',
@@ -792,7 +792,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Ferrari Daytona SP3 2022 | www.vecarz.com", bytes: 43299892 },
+    _meta: { name: "Ferrari Daytona SP3 2022 | www.vecarz.com", bytes: 4328060 },
   },
   'ferrari-purosangue': {
     model3D: '/cars/ferrari/ferrari-purosangue/model.glb',
@@ -807,7 +807,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2022 Ferrari Purosangue", bytes: 51609740 },
+    _meta: { name: "2022 Ferrari Purosangue", bytes: 1963936 },
   },
   'ferrari-roma': {
     model3D: '/cars/ferrari/ferrari-roma/model.glb',
@@ -852,7 +852,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Tesla Cybertruck", bytes: 52783904 },
+    _meta: { name: "Tesla Cybertruck", bytes: 3504064 },
   },
   'tesla-model-y': {
     model3D: '/cars/tesla/tesla-model-y/model.glb',
@@ -867,7 +867,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2021 Tesla Model Y", bytes: 30264404 },
+    _meta: { name: "2021 Tesla Model Y", bytes: 788232 },
   },
   'tesla-model3': {
     model3D: '/cars/tesla/tesla-model3/model.glb',
@@ -897,7 +897,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "tesla model S plaid 2021 with interior", bytes: 48248544 },
+    _meta: { name: "tesla model S plaid 2021 with interior", bytes: 1480220 },
   },
   'tesla-roadster-2': {
     model3D: '/cars/tesla/tesla-roadster-2/model.glb',
@@ -912,7 +912,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Tesla roadster V1.2(Check desc for details)", bytes: 25818348 },
+    _meta: { name: "Tesla roadster V1.2(Check desc for details)", bytes: 1148028 },
   },
   'nissan-ariya': {
     model3D: '/cars/nissan/nissan-ariya/model.glb',
@@ -927,7 +927,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2020 Nissan Ariya", bytes: 42700220 },
+    _meta: { name: "2020 Nissan Ariya", bytes: 1285072 },
   },
   'nissan-gtr': {
     model3D: '/cars/nissan/nissan-gtr/model.glb',
@@ -942,7 +942,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Nissan GTR R35 Liberty Walk", bytes: 37226948 },
+    _meta: { name: "Nissan GTR R35 Liberty Walk", bytes: 890844 },
   },
   'nissan-gtr-r34': {
     model3D: '/cars/nissan/nissan-gtr-r34/model.glb',
@@ -1002,7 +1002,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Mc Laren 750s", bytes: 126793088 },
+    _meta: { name: "Mc Laren 750s", bytes: 2733836 },
   },
   'mclaren-artura': {
     model3D: '/cars/mclaren/mclaren-artura/model.glb',
@@ -1047,7 +1047,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Squadra Corse Lamborghini Huracan - SDC", bytes: 28014812 },
+    _meta: { name: "Squadra Corse Lamborghini Huracan - SDC", bytes: 1352100 },
   },
   'lambo-temerario': {
     model3D: '/cars/lamborghini/lambo-temerario/model.glb',
@@ -1062,7 +1062,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Lamborghini Temerario (2025)", bytes: 26799748 },
+    _meta: { name: "Lamborghini Temerario (2025)", bytes: 3032648 },
   },
   'lambo-urus': {
     model3D: '/cars/lamborghini/lambo-urus/model.glb',
@@ -1078,7 +1078,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
     paintMaterialPattern: "^Material\\.001$|^Material\\.004$", // catch-all materials carrying body panels
-    _meta: { name: "( FREE ) Lamborghini Urus - SDC Carbone Edition", bytes: 28717412 },
+    _meta: { name: "( FREE ) Lamborghini Urus - SDC Carbone Edition", bytes: 1128976 },
   },
   'maruti-baleno': {
     model3D: '/cars/maruti/maruti-baleno/model.glb',
@@ -1093,7 +1093,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2022 Maruti Suzuki Baleno", bytes: 35671988 },
+    _meta: { name: "2022 Maruti Suzuki Baleno", bytes: 2495952 },
   },
   'maruti-dzire': {
     model3D: '/cars/maruti/maruti-dzire/model.glb',
@@ -1108,7 +1108,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2022 Maruti Suzuki Swift Dzire", bytes: 56820804 },
+    _meta: { name: "2022 Maruti Suzuki Swift Dzire", bytes: 3785720 },
   },
   'maruti-fronx': {
     model3D: '/cars/maruti/maruti-fronx/model.glb',
@@ -1153,7 +1153,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2021 Tata Safari", bytes: 41619720 },
+    _meta: { name: "2021 Tata Safari", bytes: 2555304 },
   },
   'tata-nexon-ev': {
     model3D: '/cars/tata/tata-nexon-ev/model.glb',
@@ -1198,7 +1198,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2022 Mahindra Scorpio-N", bytes: 57142696 },
+    _meta: { name: "2022 Mahindra Scorpio-N", bytes: 4456056 },
   },
   'mahindra-thar': {
     model3D: '/cars/mahindra/mahindra-thar/model.glb',
@@ -1213,7 +1213,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "MAHINDRA THAR 4X4", bytes: 163008720 },
+    _meta: { name: "MAHINDRA THAR 4X4", bytes: 4546800 },
   },
   'mahindra-xuv700': {
     model3D: '/cars/mahindra/mahindra-xuv700/model.glb',
@@ -1244,7 +1244,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2026 Rolls-Royce Cullinan", bytes: 59883052 },
+    _meta: { name: "2026 Rolls-Royce Cullinan", bytes: 2952996 },
   },
   'rolls-ghost': {
     model3D: '/cars/rolls-royce/rolls-ghost/model.glb',
@@ -1259,7 +1259,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Rolls-Royce Ghost", bytes: 37357368 },
+    _meta: { name: "Rolls-Royce Ghost", bytes: 1521700 },
   },
   'rolls-phantom': {
     model3D: '/cars/rolls-royce/rolls-phantom/model.glb',
@@ -1274,7 +1274,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "2022 Rolls-Royce Phantom Extended Series II", bytes: 65258424 },
+    _meta: { name: "2022 Rolls-Royce Phantom Extended Series II", bytes: 4887156 },
   },
   'rolls-spectre': {
     model3D: '/cars/rolls-royce/rolls-spectre/model.glb',
@@ -1304,6 +1304,6 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
       redistributable: true,
     },
     animations: { doors: false, hood: false, trunk: false, lights: false, spin: false },
-    _meta: { name: "Rolls-Royce Wraith", bytes: 22531172 },
+    _meta: { name: "Rolls-Royce Wraith", bytes: 650180 },
   },
 };

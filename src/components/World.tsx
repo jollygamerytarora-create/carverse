@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import { Component, ReactNode, useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import { useStore, currentLineup, currentVehicle, currentBrandId, BRAND_IDS } from '@/lib/store';
 import { brandById } from '@/data/brands';
@@ -11,6 +11,62 @@ import BrandLogo from './BrandLogo';
 import { prefersReducedMotion, priceTag, usd } from '@/lib/utils';
 
 const Showroom = dynamic(() => import('./three/Showroom'), { ssr: false });
+
+/**
+ * Last-resort boundary around the whole 3D stage. If WebGL dies mid-session
+ * (context-loss blocklisting, driver reset, OOM), the app degrades to the
+ * data experience instead of the Next.js "client-side exception" screen.
+ */
+class ShowroomErrorBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+  componentDidCatch(error: unknown) {
+    console.warn('[CARVERSE] 3D stage crashed — switching to data view:', error);
+  }
+  render() {
+    if (this.state.failed) {
+      return (
+        <div
+          role="status"
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 0,
+            display: 'grid',
+            placeItems: 'center',
+            background: 'linear-gradient(180deg,#07080c,#0b0d13)',
+            color: 'rgba(242,244,248,0.65)',
+            fontSize: 13,
+            letterSpacing: '0.12em',
+            textAlign: 'center',
+            padding: 24,
+          }}
+        >
+          3D ENGINE PAUSED — BROWSING IN DATA MODE
+          <button
+            onClick={() => this.setState({ failed: false })}
+            style={{
+              marginTop: 14,
+              padding: '8px 18px',
+              borderRadius: 999,
+              border: '1px solid rgba(216,181,106,0.35)',
+              background: 'none',
+              color: '#d8b56a',
+              cursor: 'pointer',
+              fontSize: 12,
+              letterSpacing: '0.08em',
+            }}
+          >
+            RETRY 3D
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 /* ================= hero reveal ================= */
 
@@ -259,6 +315,8 @@ function ModeDock() {
 
 export default function World() {
   const store = useStore();
+  const tierRef = useRef<'low' | 'high'>('high');
+  tierRef.current = deviceTier();
   const [heroDone, setHeroDone] = useState(true);
   const [heroBrand, setHeroBrand] = useState<string | null>(null);
   const [hotspot, setHotspot] = useState<HotspotInfo | null>(null);
@@ -389,17 +447,19 @@ export default function World() {
   return (
     <>
       {showMainCanvas && (
-        <Showroom
-          cars={cars}
-          envAccent={envAccent}
-          autoRotate={!hotspot && (!store.mode || (in360 && !preset360)) && heroDone && !transition}
-          interior={store.mode === 'interior'}
-          interiorView={store.mode === 'interior' ? interiorView : null}
-          preset={in360 ? preset360 : null}
-          dim={dim}
-          framing={!isCarView ? 'brand' : 'car'}
-          quality={typeof window !== 'undefined' && window.innerWidth < 760 ? 'low' : 'high'}
-        />
+        <ShowroomErrorBoundary>
+          <Showroom
+            cars={cars}
+            envAccent={envAccent}
+            autoRotate={!hotspot && (!store.mode || (in360 && !preset360)) && heroDone && !transition}
+            interior={store.mode === 'interior'}
+            interiorView={store.mode === 'interior' ? interiorView : null}
+            preset={in360 ? preset360 : null}
+            dim={dim}
+            framing={!isCarView ? 'brand' : 'car'}
+            quality={tierRef.current}
+          />
+        </ShowroomErrorBoundary>
       )}
 
       {store.mode === 'interior' && (
@@ -466,3 +526,18 @@ function lineupOf(brandId: string): Vehicle[] {
 
 // wheel style names used by the configurator — kept in sync with Configurator.tsx
 const CONFIG_WHEELS = ['classic-5', 'double-spoke', 'monoblock', 'turbine', 'aero', 'cross-spoke'];
+
+/** Device tier: coarse but effective heuristic for 3D quality + preload scope. */
+function deviceTier(): 'low' | 'high' {
+  if (typeof navigator === 'undefined') return 'high';
+  const mem = (navigator as { deviceMemory?: number }).deviceMemory ?? (navigator as unknown as { deviceMemory?: number }).deviceMemory ?? 8;
+  const cores = navigator.hardwareConcurrency ?? 8;
+  const smallScreen = typeof window !== 'undefined' && window.innerWidth < 760;
+  // phones + ≤4 GB devices + ≤4-core devices render in the light tier
+  return smallScreen || mem <= 4 || cores <= 4 ? 'low' : 'high';
+}
+
+/** Whether to stream the whole fleet at boot (desktop) or load-on-visit (mobile). */
+export function shouldPreloadFleet(): boolean {
+  return deviceTier() === 'high';
+}

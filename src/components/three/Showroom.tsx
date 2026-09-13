@@ -367,10 +367,26 @@ export default function Showroom({
   interiorView = null,
   onHotspot,
 }: ShowroomProps) {
-  const [webglOk, setWebglOk] = useState(true);
+  // WebGL preflight: try to actually create a context BEFORE mounting the
+  // Canvas. Chrome blocklists contexts after repeated losses ("web page
+  // caused context loss and was blocked") — without this check the Canvas
+  // throws during render and the whole app white-screens. With it, the
+  // visitor gets the graceful data-only experience instead.
+  const [webglOk, setWebglOk] = useState<boolean | null>(null); // null = checking
+  useEffect(() => {
+    try {
+      const c = document.createElement('canvas');
+      const gl = c.getContext('webgl2') || c.getContext('webgl');
+      setWebglOk(Boolean(gl));
+      (gl as WebGLRenderingContext | null)?.getExtension('WEBGL_lose_context')?.loseContext();
+    } catch {
+      setWebglOk(false);
+    }
+  }, []);
   const [dprScale, setDprScale] = useState(1);
   const accent = envAccent;
 
+  if (webglOk === null) return null; // preflight in flight (one frame)
   if (!webglOk) {
     return (
       <div className="webgl-fallback" role="status">

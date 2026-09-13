@@ -169,8 +169,12 @@ function main() {
     })
     .join('\n');
 
+  // atomic write: a direct overwrite of the live module intermittently fails
+  // with EBUSY/UNKNOWN on Windows (indexer/AV holding a handle). Write to a
+  // temp sibling and rename — rename is atomic and never hits the lock.
+  const tmp = OUT + '.tmp';
   fs.writeFileSync(
-    OUT,
+    tmp,
     `${banner}import type { VehicleAsset } from './assetRegistry';
 
 type GeneratedRecord = VehicleAsset & { _meta?: { name: string; bytes: number } };
@@ -181,6 +185,10 @@ ${body}
 `,
     'utf-8'
   );
+  try {
+    fs.rmSync(OUT, { force: true });
+  } catch {}
+  fs.renameSync(tmp, OUT);
   console.log(`[sync] ${records.length} acquired asset(s) registered → ${path.relative(ROOT, OUT)}`);
 }
 

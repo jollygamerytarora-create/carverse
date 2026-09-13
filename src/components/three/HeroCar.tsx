@@ -18,6 +18,7 @@
 import { Suspense, useEffect, useMemo, useRef, Component, ReactNode } from 'react';
 import * as THREE from 'three';
 import { useFrame } from '@react-three/fiber';
+import { pinAsset, unpinAsset, noteParsed } from '@/lib/assetPreloader';
 import { useGLTF, Html } from '@react-three/drei';
 import { clone as skeletonClone } from 'three/examples/jsm/utils/SkeletonUtils.js';
 import { Vehicle } from '@/lib/types';
@@ -454,6 +455,18 @@ function applyKit(root: THREE.Object3D, kitParts: AssetKitPart[]) {
 function AssetStage({ url, paint, asset }: { url: string; paint: string; asset: VehicleAsset }) {
   const { scene, animations } = useGLTF(url);
   const mixers = useRef<THREE.AnimationMixer[]>([]);
+
+  // memory hygiene: while mounted, this asset's buffers + parsed scene are
+  // pinned (LRU must not evict them); on unmount they're released and the
+  // cloned materials we created below are disposed so GPU memory frees up.
+  useEffect(() => {
+    pinAsset(url);
+    noteParsed(url, scene ? 1 : 1);
+    return () => {
+      unpinAsset(url);
+    };
+  }, [url, scene]);
+
   const root = useMemo(() => {
     const s = scene.clone(true);
     s.traverse((o) => {
@@ -638,7 +651,20 @@ function AssetStage({ url, paint, asset }: { url: string; paint: string; asset: 
 
     if (process.env.NODE_ENV !== 'production') (window as unknown as { __carverseStage?: THREE.Object3D }).__carverseStage = s;
     return s;
-  }, [scene, asset.rotationY, asset.scale, asset.kitParts, asset.axisFix, asset.hideBeyondOriginalAxis, asset.hideBelowOriginalAxis, asset.hiddenMeshes, asset.wheelKit]);  // per-asset realism pass. BMW ships several demo/clay materials — void
+  }, [scene, asset.rotationY, asset.scale, asset.kitParts, asset.axisFix, asset.hideBeyondOriginalAxis, asset.hideBelowOriginalAxis, asset.hiddenMeshes, asset.wheelKit]);  // dispose every cloned material + mixer when this stage unmounts (GPU RAM)
+  useEffect(() => {
+    return () => {
+      mixers.current.forEach((m) => m.uncacheRoot(root));
+      root.traverse((o) => {
+        const mesh = o as THREE.Mesh;
+        if (!mesh.isMesh) return;
+        const mats = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+        mats.forEach((m) => (m as THREE.Material).dispose?.());
+      });
+    };
+  }, [root]);
+
+  // per-asset realism pass. BMW ships several demo/clay materials — void
   // fillers as mirror chrome, tires light-gray, glass white, and the whole
   // cabin in one clay material. Registry themes fix each to realistic values.
   const themes: { re: RegExp; color?: string; roughness?: number; metalness?: number }[] =
