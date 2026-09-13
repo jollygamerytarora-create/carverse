@@ -1,0 +1,712 @@
+{
+  "audi-e-tron-gt": {
+    "extents": [
+      1795.88,
+      407.84,
+      1825.56
+    ],
+    "lengthAxis": "z"
+  },
+  "audi-r8": {
+    "extents": [
+      32.61,
+      17.5,
+      62.56
+    ],
+    "lengthAxis": "z"
+  },
+  "audi-rs3": {
+    "extents": [
+      88.28,
+      65.8,
+      197.92
+    ],
+    "lengthAxis": "z"
+  },
+  "audi-rs5": {
+    "extents": [
+      472.47,
+      351.27,
+      1091.41
+    ],
+    "lengthAxis": "z"
+  },
+  "audi-rs6": {
+    "extents": [
+      2.13,
+      1.74,
+      5.04
+    ],
+    "lengthAxis": "z"
+  },
+  "audi-rs7": {
+    "extents": [
+      83.24,
+      57.23,
+      196.65
+    ],
+    "lengthAxis": "z"
+  },
+  "bmw-8series": {
+    "extents": [
+      228.62,
+      518.34,
+      145.58
+    ],
+    "lengthAxis": "x",
+    "axis": "z-up"
+  },
+  "bmw-i4": {
+    "extents": [
+      427.55,
+      290.03,
+      947.01
+    ],
+    "lengthAxis": "z"
+  },
+  "bmw-i5": {
+    "extents": [
+      5.07,
+      1.5,
+      2.15
+    ],
+    "lengthAxis": "x"
+  },
+  "bmw-i7": {
+    "extents": [
+      88.28,
+      61.34,
+      214.76
+    ],
+    "lengthAxis": "z"
+  },
+  "bmw-m2": {
+    "extents": [
+      2.0,
+      0.32,
+      2.0
+    ],
+    "lengthAxis": "x"
+  },
+  "bmw-m3": {
+    "extents": [
+      7.96,
+      5.54,
+      18.32
+    ],
+    "lengthAxis": "z"
+  },
+  "bmw-m4": {
+    "extents": [
+      19.9,
+      13.63,
+      45.75
+    ],
+    "lengthAxis": "z"
+  },
+  "bmw-m5-e34": {
+    "extents": [
+      6.35,
+      4.75,
+      15.7
+    ],
+    "lengthAxis": "z"
+  },
+  "bmw-m5": {
+    "extents": [
+      2.17,
+      5.19,
+      3.4
+    ],
+    "lengthAxis": "z",
+    "hideBeyondOriginalAxis": 1.62,
+    "axis": "z-up"
+  },
+  "bmw-x3": {
+    "extents": [
+      2.2,
+      1.73,
+      4.78
+    ],
+    "lengthAxis": "z"
+  },
+  "bmw-z4": {
+    "extents": [
+      4254.32,
+      1330.86,
+      1934.77
+    ],
+    "lengthAxis": "x"
+  },
+  "ferrari-296gtb": {
+    "extents": [
+      0.02,
+      0.01,
+      0.05
+    ],
+    "lengthAxis": "z"
+  },
+  "ferrari-812": {
+    "extents": [
+      1.95,
+      1.42,
+      4.62
+    ],
+    "lengthAxis": "z"
+  },
+  "ferrari-daytona": {
+    "extents": [
+      6.21,
+      3.0,
+      12.25
+    ],
+    "lengthAxis": "z"
+  },
+  "ferrari-purosangue": {
+    "extents": [
+      2.18,
+      1.61,
+      4.98
+    ],
+    "lengthAxis": "z"
+  },
+  "ferrari-roma": {
+    "extents": [
+      0.02,
+      0.01,
+      0.05
+    ],
+    "lengthAxis": "z"
+  },
+  "ferrari-sf90": {
+    "extents": [
+      0.02,
+      0.01,
+      0.05
+    ],
+    "lengthAxis": "z"
+  },
+  "ford-bronco": {
+    "extents": [
+      3.33,
+      3.0,
+      7.33
+    ],
+    "lengthAxis": "z"
+  },
+  "ford-f150": {
+    "extents": [
+      7.08,
+      5.46,
+      15.5
+    ],
+    "lengthAxis": "z"
+  },
+  "ford-focus-st": {
+    "extents": [
+      5.06,
+      3.85,
+      11.14
+    ],
+    "lengthAxis": "z"
+  },
+  "ford-gt": {
+    "extents": [
+      2.44,
+      1.73,
+      4.4
+    ],
+    "lengthAxis": "z"
+  },
+  "ford-mustang-gtd": {
+    "extents": [
+      2.08,
+      1.38,
+      4.93
+    ],
+    "lengthAxis": "z"
+  },
+  "ford-mustang": {
+    "extents": [
+      2.04,
+      1.5,
+      5.0
+    ],
+    "lengthAxis": "z"
+  },
+  "lambo-huracan": {
+    "extents": [
+      16.64,
+      16.81,
+      16.64
+    ],
+    "lengthAxis": "x"
+  },
+  "lambo-revuelto": {
+    "extents": [
+      6.84,
+      7.73,
+      7.55
+    ],
+    "lengthAxis": "z"
+  },
+  "lambo-temerario": {
+    "extents": [
+      4.71,
+      1.22,
+      2.25
+    ],
+    "lengthAxis": "x"
+  },
+  "lambo-urus": {
+    "extents": [
+      2.21,
+      1.54,
+      4.94
+    ],
+    "lengthAxis": "z"
+  },
+  "mahindra-scorpio-n": {
+    "extents": [
+      2.18,
+      1.85,
+      4.67
+    ],
+    "lengthAxis": "z"
+  },
+  "mahindra-thar": {
+    "extents": [
+      4.04,
+      3.72,
+      8.7
+    ],
+    "lengthAxis": "z"
+  },
+  "mahindra-xuv700": {
+    "extents": [
+      0.6,
+      0.28,
+      0.34
+    ],
+    "lengthAxis": "x"
+  },
+  "maruti-baleno": {
+    "extents": [
+      1.86,
+      1.54,
+      3.79
+    ],
+    "lengthAxis": "z"
+  },
+  "maruti-dzire": {
+    "extents": [
+      1.85,
+      1.61,
+      4.01
+    ],
+    "lengthAxis": "z"
+  },
+  "maruti-fronx": {
+    "extents": [
+      6.71,
+      1.85,
+      6.68
+    ],
+    "lengthAxis": "x"
+  },
+  "maruti-swift": {
+    "extents": [
+      1.9,
+      0.84,
+      0.9
+    ],
+    "lengthAxis": "x"
+  },
+  "mclaren-750s": {
+    "extents": [
+      1.95,
+      1.13,
+      4.12
+    ],
+    "lengthAxis": "z"
+  },
+  "mclaren-artura": {
+    "extents": [
+      0.02,
+      0.01,
+      0.05
+    ],
+    "lengthAxis": "z"
+  },
+  "mclaren-gts": {
+    "extents": [
+      0.02,
+      0.01,
+      0.05
+    ],
+    "lengthAxis": "z"
+  },
+  "mercedes-amg-sl": {
+    "extents": [
+      0.22,
+      0.18,
+      0.51
+    ],
+    "lengthAxis": "z"
+  },
+  "mercedes-amggt": {
+    "extents": [
+      2.09,
+      1.34,
+      4.7
+    ],
+    "lengthAxis": "z"
+  },
+  "mercedes-c63": {
+    "extents": [
+      199.83,
+      148.06,
+      502.46
+    ],
+    "lengthAxis": "z"
+  },
+  "mercedes-e53": {
+    "extents": [
+      82.78,
+      55.12,
+      189.31
+    ],
+    "lengthAxis": "z"
+  },
+  "mercedes-eqe": {
+    "extents": [
+      971.39,
+      300.0,
+      429.51
+    ],
+    "lengthAxis": "x"
+  },
+  "mercedes-eqs": {
+    "extents": [
+      1.53,
+      1.1,
+      3.69
+    ],
+    "lengthAxis": "z"
+  },
+  "mercedes-g63": {
+    "extents": [
+      0.02,
+      0.02,
+      0.05
+    ],
+    "lengthAxis": "z"
+  },
+  "mercedes-gle": {
+    "extents": [
+      40.0,
+      1.74,
+      40.0
+    ],
+    "lengthAxis": "z"
+  },
+  "mercedes-maybach": {
+    "extents": [
+      5.46,
+      2.53,
+      2.16
+    ],
+    "lengthAxis": "x"
+  },
+  "mercedes-sclass": {
+    "extents": [
+      0.02,
+      0.02,
+      0.05
+    ],
+    "lengthAxis": "z"
+  },
+  "nissan-ariya": {
+    "extents": [
+      87.86,
+      66.95,
+      184.43
+    ],
+    "lengthAxis": "z"
+  },
+  "nissan-gtr-r34": {
+    "extents": [
+      1.92,
+      1.91,
+      4.77
+    ],
+    "lengthAxis": "z"
+  },
+  "nissan-gtr": {
+    "extents": [
+      459.17,
+      126.4,
+      217.64
+    ],
+    "lengthAxis": "x"
+  },
+  "nissan-leaf": {
+    "extents": [
+      4.41,
+      1.55,
+      1.82
+    ],
+    "lengthAxis": "x"
+  },
+  "nissan-z": {
+    "extents": [
+      2.82,
+      1.94,
+      6.13
+    ],
+    "lengthAxis": "z"
+  },
+  "porsche-718-cayman": {
+    "extents": [
+      0.52,
+      1.18,
+      0.46
+    ],
+    "lengthAxis": "x",
+    "axis": "z-up"
+  },
+  "porsche-911-carrera": {
+    "extents": [
+      0.04,
+      0.03,
+      0.09
+    ],
+    "lengthAxis": "z"
+  },
+  "porsche-911-gt3": {
+    "extents": [
+      1.98,
+      1.3,
+      4.55
+    ],
+    "lengthAxis": "z"
+  },
+  "porsche-911-turbo": {
+    "extents": [
+      0.02,
+      0.01,
+      0.05
+    ],
+    "lengthAxis": "z"
+  },
+  "porsche-911": {
+    "extents": [
+      0.02,
+      0.01,
+      0.05
+    ],
+    "lengthAxis": "z"
+  },
+  "porsche-918": {
+    "extents": [
+      2.06,
+      1.25,
+      4.65
+    ],
+    "lengthAxis": "z"
+  },
+  "porsche-cayenne": {
+    "extents": [
+      0.02,
+      0.02,
+      0.05
+    ],
+    "lengthAxis": "z"
+  },
+  "porsche-panamera": {
+    "extents": [
+      0.02,
+      0.01,
+      0.05
+    ],
+    "lengthAxis": "z"
+  },
+  "porsche-taycan-turbo": {
+    "extents": [
+      2.14,
+      1.39,
+      4.95
+    ],
+    "lengthAxis": "z"
+  },
+  "porsche-taycan": {
+    "extents": [
+      2139.01,
+      1408.99,
+      4949.5
+    ],
+    "lengthAxis": "z"
+  },
+  "rolls-cullinan": {
+    "extents": [
+      2.15,
+      1.98,
+      5.36
+    ],
+    "lengthAxis": "z"
+  },
+  "rolls-ghost": {
+    "extents": [
+      2.06,
+      1.52,
+      5.33
+    ],
+    "lengthAxis": "z"
+  },
+  "rolls-phantom": {
+    "extents": [
+      4.58,
+      1.25,
+      1.65
+    ],
+    "lengthAxis": "x"
+  },
+  "rolls-spectre": {
+    "extents": [
+      2718.7,
+      6902.4,
+      2013.6
+    ],
+    "lengthAxis": "z",
+    "note": "2026 Spectre: GLB ships self-cancelling +/-90 wrappers; native orientation correct"
+  },
+  "rolls-wraith": {
+    "extents": [
+      48.2,
+      85.2,
+      53.9
+    ],
+    "note": "Rolls_royce_wraith 709k \u2014 Z-up by ratio (Y=85 length, Z=54 height)"
+  },
+  "tata-harrier": {
+    "extents": [
+      2.32,
+      2.09,
+      5.29
+    ],
+    "lengthAxis": "z"
+  },
+  "tata-nexon-ev": {
+    "extents": [
+      2.0,
+      4.1,
+      1.8
+    ],
+    "lengthAxis": "y",
+    "note": "lowpoly Nexon EV \u2014 wrapper check live first"
+  },
+  "tata-nexon": {
+    "extents": [
+      21.99,
+      4.13,
+      76.35
+    ],
+    "lengthAxis": "z"
+  },
+  "tata-punch": {
+    "extents": [
+      1.94,
+      1.92,
+      3.83
+    ],
+    "lengthAxis": "z"
+  },
+  "tesla-cybertruck": {
+    "extents": [
+      336.94,
+      327.69,
+      120.39
+    ],
+    "lengthAxis": "x"
+  },
+  "tesla-model-y": {
+    "extents": [
+      2.04,
+      1.65,
+      4.76
+    ],
+    "lengthAxis": "z"
+  },
+  "tesla-model3": {
+    "extents": [
+      2.86,
+      1.97,
+      6.26
+    ],
+    "lengthAxis": "z"
+  },
+  "tesla-models": {
+    "extents": [
+      220.81,
+      148.96,
+      503.98
+    ],
+    "lengthAxis": "z"
+  },
+  "tesla-roadster-2": {
+    "extents": [
+      1.89,
+      1.18,
+      4.63
+    ],
+    "lengthAxis": "z"
+  },
+  "toyota-camry": {
+    "extents": [
+      2.14,
+      1.47,
+      4.89
+    ],
+    "lengthAxis": "z"
+  },
+  "toyota-gr-supra": {
+    "extents": [
+      2.39,
+      1.51,
+      5.24
+    ],
+    "lengthAxis": "z"
+  },
+  "toyota-gr-yaris": {
+    "extents": [
+      2.01,
+      1.59,
+      4.2
+    ],
+    "lengthAxis": "z"
+  },
+  "toyota-gr86": {
+    "extents": [
+      1.99,
+      1.3,
+      4.26
+    ],
+    "lengthAxis": "z"
+  },
+  "toyota-landcruiser": {
+    "extents": [
+      0.17,
+      0.14,
+      0.38
+    ],
+    "lengthAxis": "z"
+  },
+  "toyota-supra": {
+    "extents": [
+      0.02,
+      0.01,
+      0.05
+    ],
+    "lengthAxis": "z"
+  }
+}
