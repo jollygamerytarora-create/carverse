@@ -129,7 +129,7 @@ export const GENERATED_RECORDS: Record<string, GeneratedRecord> = {
     hideBeyondOriginalAxis: 1.62, // floating duplicate variant pruned
     paintMaterialPattern: "grille_neon|^Material$|trunk_body", // catch-all materials carrying body panels
     wheelKit: true, // source ships no wheel geometry — stage appends procedural wheels
-    _meta: { name: "BMW M5 (G90/G99) 2024", bytes: 2331680 },
+    _meta: { name: "BMW M5 (G90/G99) 2024", bytes: 3309380 },
   },
   'bmw-m5-e34': {
     model3D: '/cars/bmw/bmw-m5-e34/model.glb',

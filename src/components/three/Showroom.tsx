@@ -283,14 +283,19 @@ function Environment({ accent, dim, interiorMode }: { accent: string; dim: boole
 }
 
 function Floor({ quality }: { quality: 'high' | 'low' }) {
+  // Reflections + contact shadows each re-render the car scene per frame.
+  // On weak GPUs (and always on 'low') they collapse to cheap static-ish
+  // settings: the reflection loses nothing perceptible at 256px with lighter
+  // blur, and the grid/shadows carry the grounded look.
+  const strong = quality === 'high';
   return (
     <group>
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.001, 0]} receiveShadow>
         <planeGeometry args={[70, 70]} />
         <MeshReflectorMaterial
-          resolution={quality === 'high' ? 512 : 256}
-          blur={[180, 60]}
-          mixBlur={1}
+          resolution={strong ? 256 : 128}
+          blur={strong ? [240, 80] : [120, 40]}
+          mixBlur={1.2}
           mixStrength={9}
           mirror={0.55}
           depthScale={1.1}
@@ -314,7 +319,7 @@ function Floor({ quality }: { quality: 'high' | 'low' }) {
         fadeStrength={1.6}
         infiniteGrid
       />
-      <ContactShadows position={[0, 0.012, 0]} opacity={0.72} scale={16} blur={2.6} far={4} resolution={quality === 'high' ? 512 : 256} color="#000000" />
+      <ContactShadows position={[0, 0.012, 0]} opacity={0.72} scale={16} blur={2.6} far={4} resolution={strong ? 256 : 128} frames={strong ? Infinity : 1} color="#000000" />
     </group>
   );
 }
@@ -393,33 +398,36 @@ export default function Showroom({
         3D preview unavailable on this device — enjoy the data experience instead.
       </div>
     );
-  }
-
-  return (
-    <Canvas
-      id="bg-canvas-inner"
-      shadows={false}
+  }    return (
+      <Canvas
+        id="bg-canvas-inner"
+        shadows={false}
+        frameloop={dim ? 'demand' : 'always'}
       dpr={[
-        (quality === 'high' ? 1 : 0.7) * dprScale,
-        (quality === 'high' ? 1.25 : 1.05) * dprScale,
+        (quality === 'high' ? 0.85 : 0.6) * dprScale,
+        (quality === 'high' ? 1.1 : 0.85) * dprScale,
       ]}
       camera={{ position: [6, 3.2, 6], fov: 38, near: 0.1, far: 80 }}
-      gl={{ antialias: quality === 'high', alpha: true, powerPreference: 'high-performance', stencil: false }}
+      gl={{ antialias: false, alpha: true, powerPreference: 'high-performance', stencil: false }}
       onCreated={({ gl }) => {
         gl.toneMappingExposure = 1.18;
       }}
       style={{ position: 'fixed', inset: 0, zIndex: 0 }}
       aria-label="Interactive 3D vehicle showroom. Drag to rotate, scroll to zoom."
     >
-      {/* adaptive resolution: sacrifice pixels before frames under load */}
+      {/* adaptive resolution: sacrifice pixels before frames under load.
+          Bounds + flipflops prevent oscillation; lower bound is gentler now
+          that the base DPR is cheaper (never blurrier than 0.5x). */}
       <PerformanceMonitor
-        onDecline={() => setDprScale((s) => Math.max(0.55, s - 0.15))}
-        onIncline={() => setDprScale((s) => Math.min(1, s + 0.05))}
+        bounds={(refreshrate) => [40, 90]}
+        flipflops={3}
+        onDecline={() => setDprScale((s) => Math.max(0.6, s - 0.12))}
+        onIncline={() => setDprScale((s) => Math.min(1, s + 0.04))}
       />
       <EnvMap />
       <Environment accent={accent} dim={dim} interiorMode={interior} />
       <Floor quality={quality} />
-      <Sparkles count={quality === 'high' ? 40 : 16} scale={[18, 6, 18]} position={[0, 3, 0]} size={1.6} speed={0.25} opacity={0.35} color="#9fb4cc" />
+      {quality === 'high' && <Sparkles count={28} scale={[18, 6, 18]} position={[0, 3, 0]} size={1.6} speed={0.25} opacity={0.35} color="#9fb4cc" />}
       {interior ? (
         cars.map((cfg, i) => (
           <CarInstance key={`int-${cfg.vehicle.id}-${i}`} cfg={cfg} onHotspot={onHotspot} accent={accent} interior />
